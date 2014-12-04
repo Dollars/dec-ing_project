@@ -4,6 +4,6 @@ dec-ing_project
 Criteria repartition
 --------------------
 
-# Xavier #
+### Xavier ###
 
-# Victor #
+### Victor ###
