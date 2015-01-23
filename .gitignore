@@ -1,4 +1,4 @@
-*.pdf
+Report/*.pdf
 *.log
 *.aux
 *.synctex.gz
