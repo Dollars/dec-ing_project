@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[french]{babel} % to write in french
 \usepackage[final]{pdfpages} % include pdf files
+\usepackage{enumitem}
 
 \begin{document}
 
@@ -36,11 +37,56 @@ This project is about trying to find the best fitting cloud solution for the Rai
 
 
 \section{Alternatives}
-As a provider of telematics solutions for the railway world, Railnova has multiple needs of computation, data storage and connectivity capabilities. Mainly, the different types of cloud computing services can be referred to Software as a Service (SaaS), Infrastructure as a Service (IaaS) or Platform as a Service (PaaS). IaaS is an abstraction of the hardware for customers which need to work with virtual machines that they configure themselves. The PaaS type can be seen as an upper layer over IaaS solutions, consisting in a set of tools and libraries designed to make coding and deploying applications easier.
+As a provider of telematics solutions for the railway world, Railnova has multiple needs of computation, data storage and connectivity capabilities. Mainly, the different types of cloud computing services can be referred to Software as a Service (SaaS), Infrastructure as a Service (IaaS) or Platform as a Service (PaaS). IaaS is an abstraction of the hardware for customers which need to work with virtual machines that they configure themselves. The PaaS type can be seen as an upper layer over IaaS solutions, consisting in a set of tools and libraries designed to make coding and deploying applications easier.\\
+
+A set of offers from multiple companies has been chosen by consultation with Railnova's employees. 
 
 
 \section{Criteria}
-As said before, the companies are not compliant to help with the comparison over the concurrency. The cost is usually one of the main criteria.
+% TODO: citation ?
+Several criteria are proposed in the literature for the evaluation of cloud services. The criteria which are used in this work has been chosen after consulting the company's preferences.
+Those criteria are defined as:
+\begin{description}[parsep=1pt,listparindent=\parindent,labelindent=\parindent,font=$\bullet$\ ]
+  \item[Availability:] The average amount of time during which the service is accessible and operational.\\
+    \emph{Note:} A very common way to evaluate the availability is to use the downtime per year.\\
+    \emph{Measurement:} This criteria is expressed as a percentage of the downtime.
+
+% There is a minimum requirements needed by the user to perform his task, this minimum requirements is a threshold to consider a service as a solution.
+  \item[Efficiency:] How well does a service respond to a given task.\\
+    \emph{Note:} Response time.\\
+    \emph{Measurement:} 
+
+  
+  \item[Cost:] The fee that the consumer must pay by using the given service.\\
+    \emph{Note:} There is several type of pricing scheme and even a same provider offers different solutions which are suitable for the consumer requirements. For the same price, services can offer different amount of data storage, RAM, number of CPU cores, CPU frequency and bandwidth capacity.\\
+    \emph{Measurement:} 
+
+  \item[Reputation:] The reputation is the opinion of the user toward the provider.\\
+    \emph{Note:} The reputation of a service provider has an impact on the productivity. An employee working with a solution in which he does not have motivation to work with may give rise to additional costs.\\
+    \emph{Measurement:} This is expressed as a scale from 0 to 5.
+    
+  \item[Portability:] The ability to easily port a solution to another service provider.\\%(lock-in)
+    \emph{Note:} \\
+    \emph{Measurement:} 
+
+  \item[Migration:] The effort needed to migrate from the current service to the new service.\\
+    \emph{Note:} \\
+    \emph{Measurement:} 
+
+  \item[Usability:] The extent to which the service is easy to use and comprehend.\\
+    \emph{Note:} Good documentation is useful when trying new features or in case of failure.\\
+    \emph{Measurement:} A scale from 0 to 5 is used to express the subjective perception.
+
+  \item[Reliability:] The reliability is the extent to which the provider meets the performance level agreed in the SLA.\\
+    \emph{Note:} \\
+    \emph{Measurement:} 
+
+  \item[Security backup:] the extent to which the client is confident in the data preservation capacity of the provider.\\
+    \emph{Note:} \\
+    \emph{Measurement:} 
+
+\end{description}
+
 
 \subsection{Weights}
 
