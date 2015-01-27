@@ -53,9 +53,9 @@ Those criteria are defined as:
     \emph{Note:} A very common way to evaluate the availability is to use the downtime per year.\\
     \emph{Measurement:} This criteria is expressed as a percentage of the downtime. The used formula is $\frac{t_{st}-t_{dt}}{t_{st}}*100$, where $t_{st}$ is the total service time and $t_{dt}$ is the total down-time.
 
-  \item[Service efficiency:] How well does a service respond to a given task.\\
-    \emph{Note:} The response time of the provider to accomplish a requested task emitted by the costumer.\\
-    \emph{Measurement:} 
+  \item[Service efficiency:] How well does a provider responds and implements a given request emitted by the client.\\
+    \emph{Note:} When a client request new VM or new database instances, the time spent to accomplish that request has an impact on the client productivity.\\
+    \emph{Measurement:} The time spent between the costumer request emission and its implementation by the provider.
 
   \item[Cost:] The fee that the costumer must pay by using the given service.\\
     \emph{Note:} There is several type of pricing scheme and even a same provider offers different solutions which are suitable for the consumer requirements. For the same price, services can offer different amount of data storage, RAM, number of CPU cores, CPU frequency and bandwidth capacity. In addition, we must take in consideration the cost of what part of the offer price is dedicated to the human management price. Indeed, a solution costing 100\euro{} with a 10\% part dedicated to human cost is more likely to please Railnova than a solution costing 100\euro{} with a 80\% part dedicated to human cost. Because it supposes that the rest of the price is dedicated to the actual hardware and technology provided. This cost will be computed separately.\\
