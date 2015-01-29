@@ -19,8 +19,8 @@
 	{\Huge \par}{\Huge Decision Engineering}{\Huge \par}
 	{\Huge \par}{\huge Cloud service providers comparison}{\Huge \par}
 
-	{\huge \par}{\Large Victor Carakehian, }
-				{\Large Xavier Barthel}{\huge \par}
+	{\huge \par}{\Large Xavier Barthel, }
+				{\Large Victor Carakehian}{\huge \par}
 	
 	\vfill{}
 	\includegraphics{img/ulb_symbol.pdf}
@@ -31,7 +31,7 @@
 \end{titlepage}
 
 \section{Introduction}
-This project is about choosing an alternative amongst multiple other ones. The process of choosing an alternative is more or less simple when it is done on the basis of a single criterion. However, most of the time a decision involves more than one criterion for decision-making process and the complex decision problems can not be resolved on the basis of unidimensional approaches. The difficulty resides in evaluating alternatives taking in account criteria. Those criteria are often conflicting and do not use the same units to quantify them. The purpose of MCDA is to help decision makers by modeling and representing his preferences.\\ % TODO: MCDA provides a set of criteria aggregation methodologies.
+This project is about choosing an alternative amongst multiple other ones. The process of choosing an alternative is simple when it is done on the basis of a single criterion. However, most of the time a decision involves more than one criterion for decision-making process and the complex decision problems can not be resolved on the basis of unidimensional approaches. The difficulty resides in evaluating alternatives taking in account criteria. Those criteria are often conflicting and do not use the same units to quantify them. In order to establish a ranking of the alternatives, Multi-Criteria Decision Analysis (MCDA) has lead to the creation of ranking methods such as Promethee , Electre or AHP. The purpose of MCDA is to help decision makers by modelling and representing his preferences. In this project, we used an implementation of the Promethee method, made available by the D-Sight Software Company, to perform a market analysis and comparison of Internet \og Cloud \fg{} providers. We will define each criterion held for the comparison, give the precise way we measure it and discuss the weight we gave to it. We will then analyse the results provided by the D-Sight's plateform.\\ % TODO: MCDA provides a set of criteria aggregation methodologies.
 
 
 \section{Context}
@@ -71,7 +71,7 @@ Those criteria are defined as:
 
   \item[Migration:] The effort needed to migrate from the current service to the new service.\\
     \emph{Note:} The migration is the extent which denotes how close is the alternative to the current used resources. It is expressed as a value which gives a distance between the current solution and the new one.\\
-    \emph{Measurement:} This value is expressed as a percentage. As an example, to migrate from a solution using python for the implementation and MySQL for the database, it will be evaluated with the following formula $( db \times p_{db} + language \times p_{language})  * 100 $, where $ db, language \in [ 0,1 ] $ and $ p_{db}, p_{language} \in [ 0, \ldots, 1 ], \text{ with } p_{db} + p_{language} = 1$. 
+    \emph{Measurement:} This value is expressed as a percentage. As an example, to migrate from a solution using python for the implementation and MySQL for the database, it will be evaluated with the following formula $( db \times p_{db} + language \times p_{language})  * 100 $, where $ db, language \in {0,1} $ and $ p_{db}, p_{language} \in [ 0, 1 ], \text{ with } p_{db} + p_{language} = 1$. 
 
   \item[Usability:] The extent to which the service is easy to use and comprehend.\\
     \emph{Note:} Good documentation is useful when trying new features or in case of failure.\\
