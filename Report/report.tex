@@ -48,50 +48,50 @@ A set of offers from multiple companies has been chosen by consultation with Rai
 \section{Criteria}
 Several criteria are proposed in the literature for the evaluation of cloud services. The criteria which are used in this work has been chosen after consulting the company's preferences.
 Those criteria are defined as:
-\begin{description}[parsep=1pt,listparindent=\parindent,labelindent=\parindent,font=$\bullet$\ ]
-  \item[Availability:] The average amount of time during which the service is accessible and operational.\\
-    \emph{Note:} A very common way to evaluate the availability is to use the downtime per year.\\
-    \emph{Measurement:} This criteria is expressed as a percentage of the downtime. The used formula is $\frac{t_{st}-t_{dt}}{t_{st}}*100$, where $t_{st}$ is the total service time and $t_{dt}$ is the total down-time.
+\begin{description}[parsep=10pt,listparindent=\parindent,labelindent=\parindent,font=$\bullet$\ ]
+  \item[Availability:] The average amount of time during which the service is accessible and operational.
+    \par \emph{Note:} A very common way to evaluate the availability is to use the downtime per year.
+    \par \emph{Measurement:} This criteria is expressed as a percentage of the downtime. The used formula is $\frac{t_{st}-t_{dt}}{t_{st}}*100$, where $t_{st}$ is the total service time and $t_{dt}$ is the total down-time.
 
-  \item[Service efficiency:] How well does a provider responds and implements a given request emitted by the client.\\
-    \emph{Note:} When a client request new VM or new database instances, the time spent to accomplish that request has an impact on the client productivity.\\
-    \emph{Measurement:} The time spent between the costumer request emission and its implementation by the provider.
+  \item[Service efficiency:] How well does a provider responds and implements a given request emitted by the client.
+     \par \emph{Note:} When a client request new VM or new database instances, the time spent to accomplish that request has an impact on the client productivity.
+    \par \emph{Measurement:} The time spent between the costumer request emission and its implementation by the provider.
 
-  \item[Cost:] The fee that the costumer must pay by using the given service.\\
-    \emph{Note:} There is several type of pricing scheme and even a same provider offers different solutions which are suitable for the consumer requirements. For the same price, services can offer different amount of data storage, RAM, number of CPU cores, CPU frequency and bandwidth capacity. In addition, we must take in consideration the cost of what part of the offer price is dedicated to the human management price. Indeed, a solution costing 100\euro{} with a 10\% part dedicated to human cost is more likely to please Railnova than a solution costing 100\euro{} with a 80\% part dedicated to human cost. Because it supposes that the rest of the price is dedicated to the actual hardware and technology provided. This cost will be computed separately.\\
-    \emph{Measurement:} The cost is defined with the performance metric made available by the provider by VM, $\frac{p}{cpu^a + net^b + data^c + RAM^d}$. Weights are used to express the importance of some features for the given application. Those weights must respect the following constraint $a+b+c+d=1$.
+  \item[Cost:] The fee that the costumer must pay by using the given service.
+    \par \emph{Note:} There is several type of pricing scheme and even a same provider offers different solutions which are suitable for the consumer requirements. For the same price, services can offer different amount of data storage, RAM, number of CPU cores, CPU frequency and bandwidth capacity. In addition, we must take in consideration the cost of what part of the offer price is dedicated to the human management price. Indeed, a solution costing 100\euro{} with a 10\% part dedicated to human cost is more likely to please Railnova than a solution costing 100\euro{} with a 80\% part dedicated to human cost. Because it supposes that the rest of the price is dedicated to the actual hardware and technology provided. This cost will be computed separately.
+    \par \emph{Measurement:} The cost is defined with the performance metric made available by the provider by VM, $\frac{p}{cpu^a + net^b + data^c + RAM^d}$. Weights are used to express the importance of some features for the given application. Those weights must respect the following constraint $a+b+c+d=1$.
 
-  \item[Reputation:] The reputation is the opinion of the user toward the provider.\\
-    \emph{Note:} The reputation of a service provider has an impact on the productivity. An employee working with a solution in which he does not have motivation to work with may give rise to additional costs.\\
-    \emph{Measurement:} This is expressed as a scale from 1 to 5.
+  \item[Reputation:] The reputation is the opinion of the user toward the provider.
+    \par \emph{Note:} The reputation of a service provider has an impact on the productivity. An employee working with a solution in which he does not have motivation to work with may give rise to additional costs.
+    \par \emph{Measurement:} This is expressed as a scale from 1 to 5.
     
-  \item[Portability:] The ability to easily port a solution to another service provider.\\
-    \emph{Note:} This criteria is complex to evaluate. Thus, to tackle this criteria, we have decided to express it as the capacity of reimplementing the application on a server owned by the customer. Mainly this is expressed as the availability of open-source API, framework, library and standard compliance.\\
-    \emph{Measurement:} As a quality measurement, this is expressed as a scale from 1 to 5.
+  \item[Portability:] The ability to easily port a solution to another service provider.
+    \par \emph{Note:} This criteria is complex to evaluate. Thus, to tackle this criteria, we have decided to express it as the capacity of reimplementing the application on a server owned by the customer. Mainly this is expressed as the availability of open-source API, framework, library and standard compliance.
+    \par \emph{Measurement:} As a quality measurement, this is expressed as a scale from 1 to 5.
 
-  \item[Migration:] The effort needed to migrate from the current service to the new service.\\
-    \emph{Note:} The migration is the extent which denotes how close is the alternative to the current used resources. It is expressed as a value which gives a distance between the current solution and the new one.\\
-    \emph{Measurement:} This value is expressed as a percentage. As an example, to migrate from a solution using python for the implementation and MySQL for the database, it will be evaluated with the following formula $( db \times p_{db} + language \times p_{language})  * 100 $, where $ db, language \in {0,1} $ and $ p_{db}, p_{language} \in [ 0, 1 ], \text{ with } p_{db} + p_{language} = 1$. 
+  \item[Migration:] The effort needed to migrate from the current service to the new service.
+    \par \emph{Note:} The migration is the extent which denotes how close is the alternative to the current used resources. It is expressed as a value which gives a distance between the current solution and the new one.
+    \par \emph{Measurement:} This value is expressed as a percentage. As an example, to migrate from a solution using python for the implementation and MySQL for the database, it will be evaluated with the following formula $( db \times p_{db} + language \times p_{language})  * 100 $, where $ db, language \in \{0,1\} $ and $ p_{db}, p_{language} \in [ 0, 1 ], \text{ with } p_{db} + p_{language} = 1$. 
 
-  \item[Usability:] The extent to which the service is easy to use and comprehend.\\
-    \emph{Note:} Good documentation is useful when trying new features or in case of failure.\\
-    \emph{Measurement:} A scale from 1 to 5 is used to express the subjective perception.
+  \item[Usability:] The extent to which the service is easy to use and comprehend.
+    \par \emph{Note:} Good documentation is useful when trying new features or in case of failure.
+    \par \emph{Measurement:} A scale from 1 to 5 is used to express the subjective perception.
 
-  \item[Reliability:] The reliability is the extent to which the provider meets the performance level promised.\\
-    \emph{Note:} Reliability is mainly assured by using systems which are redundantly designed, not dependent on the geographical and physical position and use robust software fail-over to withstand disruption.\\
-    \emph{Measurement:} The criteria his highly dependent on the policy of the provider, which may include business continuity plan in case of major disaster as much as he can cover hardware failure scenario. Then, this criteria is evaluated with a scale from 1 to 5.
+  \item[Reliability:] The reliability is the extent to which the provider meets the performance level promised.
+    \par \emph{Note:} Reliability is mainly assured by using systems which are redundantly designed, not dependent on the geographical and physical position and use robust software fail-over to withstand disruption.
+    \par \emph{Measurement:} The criteria his highly dependent on the policy of the provider, which may include business continuity plan in case of major disaster as much as he can cover hardware failure scenario. Then, this criteria is evaluated with a scale from 1 to 5.
 
-  \item[Security:] The extent to which the provider can assure the protection of data exchange and the access control.\\
-    \emph{Note:} There are multiple mechanisms to achieve the protection of the application. For example, encryption of data transfer must be assure for intern and extern movements. Another example is that, the security of the application must be guaranteed even against user which are executing on the same machine. Hardware and physical security must be assure too. \\
-    \emph{Measurement:} First, we will determine which are the common security mechanisms implemented by every cloud solutions. Then, we list and sum up all the extra security measures implemented by each cloud service provider, and divide the obtained value by the common factor.
+  \item[Security:] The extent to which the provider can assure the protection of data exchange and the access control.
+    \par \emph{Note:} There are multiple mechanisms to achieve the protection of the application. For example, encryption of data transfer must be assure for intern and extern movements. Another example is that, the security of the application must be guaranteed even against user which are executing on the same machine. Hardware and physical security must be assure too. 
+    \par \emph{Measurement:} First, we will determine which are the common security mechanisms implemented by every cloud solutions. Then, we list and sum up all the extra security measures implemented by each cloud service provider, and divide the obtained value by the common factor.
 
-  \item[Data Integrity:] The extent to which the client is confident in the data preservation capacity of the provider.\\
-    \emph{Note:} It is important that the provider guaranties how the data are preserved. It must also ensure that they remain accurate.\\ 
-    \emph{Measurement:} A scale from 1 (no backup) to 10 (multiple backups with mechanisms that verify the integrity of those backup for free). The values in-between will be regulated by the price of the mechanisms that verify integrity.
+  \item[Data Integrity:] The extent to which the client is confident in the data preservation capacity of the provider.
+    \par \emph{Note:} It is important that the provider guaranties how the data are preserved. It must also ensure that they remain accurate.
+    \par \emph{Measurement:} A scale from 1 (no backup) to 10 (multiple backups with mechanisms that verify the integrity of those backup for free). The values in-between will be regulated by the price of the mechanisms that verify integrity.
 
-  \item[Scalability:] Ability and cost to change the size of the resources used.\\
-    \emph{Note:} As a growing company, the client is interested about finding a solution that has a good capacity to respond to bigger computation needs. The evolution of the cost given the size of resources used is often non-linear so it must be taken in account.\\
-    \emph{Measurement:} The value is computed by comparison of the price of 10 times the present resources following a linear growth and the real price of the solution for 10 times the present resources.
+  \item[Scalability:] Ability and cost to change the size of the resources used.
+    \par \emph{Note:} As a growing company, the client is interested about finding a solution that has a good capacity to respond to bigger computation needs. The evolution of the cost given the size of resources used is often non-linear so it must be taken in account.
+    \par \emph{Measurement:} The value is computed by comparison of the price of 10 times the present resources following a linear growth and the real price of the solution for 10 times the present resources.
 
 \end{description}
 
