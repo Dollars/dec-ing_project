@@ -62,24 +62,20 @@ Those criteria are defined as:
     \par \emph{Measurement:} The cost is defined with the performance metric made available by the provider by VM, $\frac{p}{cpu^a + net^b + data^c + RAM^d}$. Weights are used to express the importance of some features for the given application. Those weights must respect the following constraint $a+b+c+d=1$.
 
   \item[Reputation:] The reputation is the opinion of the user toward the provider.
-    \par \emph{Note:} The reputation of a service provider has an impact on the productivity. An employee working with a solution in which he does not have motivation to work with may give rise to additional costs.
+    \par \emph{Note:} The reputation of a service provider has an impact on the productivity. An employee working with a solution in which he does not have motivation to work with may give rise to additional costs. A provider got marks when giving donation to open source and for innovation.
     \par \emph{Measurement:} This is expressed as a scale from 1 to 5.
     
   \item[Portability:] The ability to easily port a solution to another service provider.
     \par \emph{Note:} This criteria is complex to evaluate. Thus, to tackle this criteria, we have decided to express it as the capacity of reimplementing the application on a server owned by the customer. Mainly this is expressed as the availability of open-source API, framework, library and standard compliance.
     \par \emph{Measurement:} As a quality measurement, this is expressed as a scale from 1 to 5.
 
-  \item[Migration:] The effort needed to migrate from the current service to the new service.
-    \par \emph{Note:} The migration is the extent which denotes how close is the alternative to the current used resources. It is expressed as a value which gives a distance between the current solution and the new one.
-    \par \emph{Measurement:} This value is expressed as a percentage. As an example, to migrate from a solution using python for the implementation and MySQL for the database, it will be evaluated with the following formula $( db \times p_{db} + language \times p_{language})  * 100 $, where $ db, language \in \{0,1\} $ and $ p_{db}, p_{language} \in [ 0, 1 ], \text{ with } p_{db} + p_{language} = 1$. 
-
   \item[Usability:] The extent to which the service is easy to use and comprehend.
     \par \emph{Note:} Good documentation is useful when trying new features or in case of failure.
-    \par \emph{Measurement:} A scale from 1 to 5 is used to express the subjective perception.
+    \par \emph{Measurement:} A scale from 1 to 3 is used to express the subjective perception.
 
   \item[Reliability:] The reliability is the extent to which the provider meets the performance level promised.
     \par \emph{Note:} Reliability is mainly assured by using systems which are redundantly designed, not dependent on the geographical and physical position and use robust software fail-over to withstand disruption.
-    \par \emph{Measurement:} The criteria his highly dependent on the policy of the provider, which may include business continuity plan in case of major disaster as much as he can cover hardware failure scenario. Then, this criteria is evaluated with a scale from 1 to 5.
+    \par \emph{Measurement:} The criteria his highly dependent on the policy of the provider, which may include business continuity plan in case of major disaster as much as he can cover hardware failure scenario. Then, this criteria is evaluated with a scale from 1 to 3.
 
   \item[Security:] The extent to which the provider can assure the protection of data exchange and the access control.
     \par \emph{Note:} There are multiple mechanisms to achieve the protection of the application. For example, encryption of data transfer must be assure for intern and extern movements. Another example is that, the security of the application must be guaranteed even against user which are executing on the same machine. Hardware and physical security must be assure too. 
