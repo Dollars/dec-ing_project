@@ -31,19 +31,36 @@
 \end{titlepage}
 
 \section{Introduction}
-This project is about choosing an alternative amongst multiple other ones. The process of choosing an alternative is simple when it is done on the basis of a single criterion. However, most of the time a decision involves more than one criterion for decision-making process and the complex decision problems can not be resolved on the basis of unidimensional approaches. The difficulty resides in evaluating alternatives taking in account criteria. Those criteria are often conflicting and do not use the same units to quantify them. In order to establish a ranking of the alternatives, Multi-Criteria Decision Analysis (MCDA) has lead to the creation of ranking methods such as Promethee , Electre or AHP. The purpose of MCDA is to help decision makers by modelling and representing his preferences. In this project, we used an implementation of the Promethee method, made available by the D-Sight Software Company, to perform a market analysis and comparison of Internet \og Cloud \fg{} providers. We will define each criterion held for the comparison, give the precise way we measure it and discuss the weight we gave to it. We will then analyse the results provided by the D-Sight's platform.\\ % TODO: MCDA provides a set of criteria aggregation methodologies.
+This project is about choosing an alternative amongst multiple other ones. The process of choosing an alternative is simple when it is done on the basis of a single criterion. However, most of the time a decision involves more than one criterion for decision-making process and the complex decision problems can not be resolved on the basis of unidimensional approaches. The difficulty resides in evaluating alternatives taking in account criteria. Those criteria are often conflicting and do not use the same units to quantify them.\\
+In order to establish a ranking of the alternatives, Multi-Criteria Decision Analysis (MCDA) has lead to the creation of ranking methods such as Promethee , Electre or AHP. The purpose of MCDA is to help decision makers by modelling and representing his preferences. In this project, we used an implementation of the Promethee method, made available by the D-Sight Software Company, to perform a market analysis and comparison of Internet \og Cloud \fg{} providers. We will define each criterion held for the comparison, give the precise way we measure it and discuss the weight we gave to it. We will then analyse the results provided by the D-Sight's platform.\\ % TODO: MCDA provides a set of criteria aggregation methodologies.
 
 
 \section{Context}
-This project is about trying to find the best fitting cloud solution for the Railnova\footnote{https://www.railnova.eu/} company. Since the number of cloud providers and their services is always growing, it becomes difficult to make a wise choice without a good study. The situation is more complex than it appears, because the market is full of meaningless (catchy) keywords and the companies are doing there best to complicate some comparisons.
+This project is about trying to find the best fitting cloud solution for the Railnova\footnote{https://www.railnova.eu/} company. Since the number of cloud providers and their services is always growing, it becomes more and more difficult over time to make a wise choice without a good study. As a provider of telematics solutions for the railway world, Railnova has multiple needs of computation, data storage and connectivity capabilities. To find a good solution, we used the present solution delivered by ovh to Railnova which consist of two dedicated servers:
+\begin{enumerate}
+  \item 32 cores with 128Go of RAM and 256 Go SSD of data storage;
+  \item 16 cores with 64Go of RAM and 2To of data storage.
+\end{enumerate}
+Those two servers are entirely managed by Railnova developers and used for two main activities:
+\begin{enumerate}
+  \item hosting a database containing all the data exploited in production and running the websites in production;
+  \item hosting a database containing all the telematics messages ever sent by the embedded devices and applications to receive and process all those messages (a switched on device send one message each 40 seconds and there is 200 devices in production).
+\end{enumerate}
+From those specifications, we selected the provider's solution fitting it and made comparison on it.\\
 
+  \section{Alternatives}
+The situation is more complex than it appears, because the market is full of meaningless (catchy) keywords and the companies are doing there best to complicate the comparisons. Mainly, the different types of cloud computing services can be referred to Software as a Service (SaaS), Infrastructure as a Service (IaaS) or Platform as a Service (PaaS). Taking in account the needs of the decision maker, we will only consider IaaS et PaaS solutions in the report.
+\begin{description}[parsep=10pt,labelindent=\parindent]
+  \item[IaaS] is an abstraction of the hardware for customers which need to work with virtual machines that they configure themselves.
+  \item[PaaS] is a type service which can be seen as an upper layer over IaaS solutions, consisting in a set of tools and libraries designed to make coding and deploying applications easier.
+\end{description}
+The advantage of Paas solutions is about being fully focused on the development of the hosted application. Thanks to this kind of service, testing and deployment are automated. The same for scalability of the application which is made easy by the simple use of a web interface and/or a command line. This kind of service can also be easily linked to use-case dedicated services as database instances.\\
+For the IaaS, the advantage is about control on the infrastructure, the resources (RAM, CPU, Bandwith, ...) are shared and virtual machines are running on it. IaaS can be seen as the basic form of cloud on which PaaS is stacked. The trade off is clear, either you take care of the running environments off your application which means having \emph{control} over the environment, either you pay someone to do it for you and you improve your \emph{productivity}.\\
+After some research, we can see that the situation is far from being as simple as a binary classification for hosting application. As an example, the Managed Virtual Machines of the Google App Engine solution which is of the PaaS type but it's purpose is to manage virtual machines of IaaS solution.\\
 
-\section{Alternatives}
 There is a minimum requirements needed by the user to perform the given tasks. This minimum requirements is a threshold to consider a service as a solution.\\
 
-As a provider of telematics solutions for the railway world, Railnova has multiple needs of computation, data storage and connectivity capabilities. Mainly, the different types of cloud computing services can be referred to Software as a Service (SaaS), Infrastructure as a Service (IaaS) or Platform as a Service (PaaS). IaaS is an abstraction of the hardware for customers which need to work with virtual machines that they configure themselves. The PaaS type can be seen as an upper layer over IaaS solutions, consisting in a set of tools and libraries designed to make coding and deploying applications easier.\\
-
-A set of offers from multiple companies has been chosen after consultation with Railnova's employees. 
+A set of offers from multiple companies has been chosen after consultation with Railnova's employees.
 
 \section{Criteria}
 Several criteria are proposed in the literature for the evaluation of cloud services. The criteria which are used in this work has been chosen after consulting the company's preferences.
