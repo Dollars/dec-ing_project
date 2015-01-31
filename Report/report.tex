@@ -112,7 +112,7 @@ Those criteria are defined as:
 
 \end{description}
 
-The final evaluation table is given at figure~\ref{fig:eval}.
+The final evaluation table is given in figure~\ref{fig:eval}.
 
 \begin{figure}[h]
   \center
@@ -122,11 +122,11 @@ The final evaluation table is given at figure~\ref{fig:eval}.
 \end{figure}
 
 \subsection{Weights}
-The weights are expressing the decision maker priority in the matter of ranking cloud services. Of course, the cost to acquire a service is one of the most important criteria, which must be minimized. Secondly, the usability and the portability are the second most important criteria, this is explained by the impact on the productivity it could induce. Thirdly, data integrity is import because of the Railnova's field of activity, they need to keep in safety the telematics' data collected over time. And then, comes the last batch of common features. Those weights can be seen as the current weight in the figure~\ref{fig:stab}.
+The weights are expressing the decision maker priority in the matter of ranking cloud services. Of course, the cost to acquire a service is one of the most important criteria, which must be minimized. Secondly, the usability and the portability are the second most important criteria, this is explained by the impact on the productivity it could induce. Thirdly, data integrity is important because of the Railnova's field of activity, they need to keep in safety the telematics' data collected over time. And then, comes the last batch of common features. Those weights can be seen as the current weight in the figure~\ref{fig:stab}.
 
 \section{Analysis}
 \subsection{Ranking}
-The final ranking is given at figure~\ref{fig:ranking}. We can see that the OVH alternative is better than the other ones according to the final ranking. The second and third alternative in the total ordered ranking are respectively Amazon AWS and Google App Engine.\\
+The final ranking is given in figure~\ref{fig:ranking}. We can see that the OVH alternative is better than the other ones according to the final ranking. The second and third alternative in the total ordered ranking are respectively Amazon AWS and Google App Engine.\\
 
 With the figure~\ref{fig:contrib}, it can be seen that the alternatives OVH and Google App Engine are well ranked because of the cost criteria. On the contrary, the Amazon AWS solution is well ranked due to his relatively good evaluation in a majority of criteria.\\
 This observation is corroborate by the figure~\ref{fig:spider}. Indeed, we can see that even if OVH was ranked first, AWS seems to be more consistent. Effectively, OVH obtained very good score in cost and portability, as well as good scores in data integrity and reputation. But it obtained poor scores in all the other alternatives. In contrast, we see that AWS obtained average score in most domains, including data integrity, scalability, service efficiency, portability, usability, reliability and security. Thus, AWS might be a good alternative to consider if we want a solution having more consistency in all domains.\\
@@ -199,13 +199,13 @@ The overall conclusion that we can state after visioning this chart is that the 
 We can, again, observe that the \textit{data integrity} criterion does not play a crucial role in the final ranking.
 
 \section{Weights Elicitation}
-Previously, the weights were assigned by asking a percentage expressing the importance of a criterion. Afterward, those weights are normalized in order to get a consistent weights assignation. Assigning those weights was not a trivial task because the considered criteria are all of the \emph{quality of service} type and some criterion are predominating then we had to modify the normalized weights to get accord with the Railnova's preferences.\\
+Previously, the weights were assigned by asking a percentage expressing the importance of a criterion. Afterwards, those weights are normalized in order to get a consistent weights assignation. Assigning those weights was not a trivial task because the considered criteria are all of the \emph{quality of service} type and some criterion are predominating then we had to modify the normalized weights to get accord with the Railnova's preferences.\\
 
 Though, we have decided to give a try to the \emph{Weights Elicitation} assignation. Assigning weights using an interactive comparison process helps to express the wanted weights assignation because it allows to give a preference order of the criteria, which was clearly the case for this project.\\
 
 It can be observed at the figure~\ref{fig:alt-ranking} that the Amazon AWS alternative is the best one with this weight assignation. The second ranked alternative is OVH thus, we can observe than those two alternatives, even if not in the same order, are still figuring in the top 2. We can also observe at the figure~\ref{fig:alt-stab} that, the Amazon AWS position is more stable, except for the cost criterion, than when OVH was the best one. 
 
-\begin{figure}[h]
+\begin{figure}
   \center
   \includegraphics[width=\textwidth-5cm]{img/Result/alternative_ranking.png}
   \caption{Ranking using the weights elicitation feature.}
@@ -220,5 +220,11 @@ It can be observed at the figure~\ref{fig:alt-ranking} that the Amazon AWS alter
 \end{figure}
 
 \section{Conclusion}
+
+Cloud Services providers market is expansion and is appealing for many developers, start-up companies and big companies. The offers are complex and every cloud provider make the comparison with others harder by using their own terms to describe their product, or cover hidden prices under custom features. This reflects in a final ranking which is quite unstable and sensitive to the decision maker preferences.\\
+
+Study the decision problem through MCDA tools was a good opportunity for Railnova the reconsider its current infrastructure. After determining relevant criteria, researching informations and interacting with Railnova's company, we came up with a system to evaluate, with the help of D-Sight's software and we were able to rank all the alternatives.\\
+
+The resulting analysis showed that any of the alternative clearly outranks its competitors. Given the preferences of the decision maker, we can give a slight advantage to the OVH's and Amazon's IaaS solutions which are respectively cost efficient and averagely good in every criteria. For the PaaS solutions, Google App Engine appeared to be the best alternative.
 
 \end{document}
