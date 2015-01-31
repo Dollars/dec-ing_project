@@ -37,7 +37,7 @@ In order to establish a ranking of the alternatives, Multi-Criteria Decision Ana
 
 
 \section{Context}
-This project is about trying to find the best fitting cloud solution for the Railnova\footnote{https://www.railnova.eu/} company. Since the number of cloud providers and their services is always growing, it becomes more and more difficult over time to make a wise choice without a good study. As a provider of telematics solutions for the railway world, Railnova has multiple needs of computation, data storage and connectivity capabilities. To find a good solution, we used the present solution delivered by ovh to Railnova which consist of two dedicated servers:
+This project is about trying to find the best fitting cloud solution for the Railnova\footnote{https://www.railnova.eu/} company. Since the number of cloud providers and their services is always growing, it becomes more and more difficult over time to make a wise choice without a good study. As a provider of telematics solutions for the railway world, Railnova has multiple needs of computation, data storage and connectivity capabilities. To find a good solution, we used the present solution delivered by OVH to Railnova which consist of two dedicated servers:
 \begin{enumerate}
   \item 32 cores with 128Go of RAM and 256 Go SSD of data storage;
   \item 16 cores with 64Go of RAM and 2To of data storage.
@@ -63,7 +63,7 @@ For the IaaS, the advantage is about control on the infrastructure, the resource
 
 After some research, we can see that the situation is far from being as simple as a binary classification for hosting application. As an example, the Managed Virtual Machines of the Google App Engine solution which is of the PaaS type but it's purpose is to manage virtual machines of IaaS solution.\\
 
-It is then asked to rank solutions of the two types while keeping in mind the current solution used is an IaaS. To do so, four IaaS providers (RackSpace, Amazon AWS, LeaseWeb, ovh) and 2 PaaS providers (Google App Engine, Heroku) are constituting the alternatives set.
+It is then asked to rank solutions of the two types while keeping in mind the current solution used is an IaaS. To do so, four IaaS providers (RackSpace, Amazon AWS, LeaseWeb, OVH) and 2 PaaS providers (Google App Engine, Heroku) are constituting the alternatives set.
 
 \section{Criteria}
 Several criteria are proposed in the literature for the evaluation of cloud services. The criteria which are used in this work has been chosen among the ones mentioned in several works about QoS based selection based on the company's preferences.
@@ -114,30 +114,37 @@ Those criteria are defined as:
 \begin{figure}[h]
   \center
   \includegraphics[width=\textwidth-2cm]{img/Result/evaluation.pdf}
+  \caption{Evaluation of the criteria for each alternative.}
+  \label{fig:eval}
 \end{figure}
 
-The weights are expressing the decision maker priority in the matter of ranking cloud services. Of course, the cost to acquire a service is one of the most important criteria, which must be minimized. Secondly, the usability and the portability are the second most important criteria, this is explained by the impact on the productivity it could induce. Thirdly, data integrity is import because of the Railnova's field of activity, they need to keep in safety the telematics' data collected over time. And then, comes the last batch of common features.
+\subsection{Weights}
+The weights are expressing the decision maker priority in the matter of ranking cloud services. Of course, the cost to acquire a service is one of the most important criteria, which must be minimized. Secondly, the usability and the portability are the second most important criteria, this is explained by the impact on the productivity it could induce. Thirdly, data integrity is import because of the Railnova's field of activity, they need to keep in safety the telematics' data collected over time. And then, comes the last batch of common features. Those weights can be seen as the current weight in the \ref{fig:stab}
 
 \section{Analysis}
 
 \subsection{Ranking}
 
 \begin{figure}[h]
-  \includegraphics[width=\textwidth]{img/Result/ranking.pdf}
+  \center
+  \includegraphics[width=\textwidth-5cm]{img/Result/ranking.pdf}
+  \caption{Ranking.}
+  \label{fig:ranking}
 \end{figure}
 %TODO:Xavier
 
 \begin{figure}[h]
-  \includegraphics[width=\textwidth]{img/Result/criteria_contribution.pdf}
+  \center
+  \includegraphics[width=\textwidth-5cm]{img/Result/criteria_contribution.pdf}
 \end{figure}
 %TODO: Xavier
 
 \subsection{GAIA Plan}
 
 \begin{figure}
-\centering
-  \includegraphics[width=\textwidth]{img/Result/gaia_plane.png}
-\caption{GAIA representation of the system.}
+  \centering
+  \includegraphics[width=\textwidth-2cm]{img/Result/gaia_plane.png}
+  \caption{GAIA representation of the system.}
   \label{fig:gaia}
 \end{figure}
 %TODO:Victor
@@ -160,7 +167,7 @@ The three most centred alternatives, LeaseWeb, AWS and Heroku have a more averag
 
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{img/Result/stability_chart.png}
+  \includegraphics[width=\textwidth-4cm]{img/Result/stability_chart.png}
   \caption{Stability chart for the best alternative (OVH).}
   \label{fig:stab}
 \end{figure}
@@ -170,7 +177,7 @@ A fundamental part of the analysis resides in finding the stability properties o
 
 \textbf{Description of the figure \ref{fig:stab} :}\\
 
-On each row, the black point indicates the current value of the weight of the criteria corresponding to its row. The blue bars indicates the range of value that we could assign the the weight of the corresponding criterion without actually modifying the position of the current best alternative (here : OVH). \\
+On each row, the black point indicates the current value of the weight of the criteria corresponding to its row. The blue bars indicates the range of value that we could assign to the weight of the corresponding criterion without actually modifying the position of the current best alternative (here : OVH). \\
 
 For example, we see that the current assigned weight for the cost criterion is 27.17\%, but is we would value it lower than 25.78\%, OVH would not remain the best alternative. In contrast, we see that we can value it up to 100\%, OVH would remain the best option, since it is the cheapest. \\
 
@@ -182,7 +189,7 @@ We can also see that the \textit{data integrity} criterion does not play a cruci
 
 \begin{figure}
 \centering
-  \includegraphics[width=\textwidth]{img/Result/spider_web-3best.png}
+  \includegraphics[width=\textwidth-2cm]{img/Result/spider_web-3best.png}
 \caption{\og Spider \fg{} representation of the 3 best alternatives.}
   \label{fig:spider}
 \end{figure}
