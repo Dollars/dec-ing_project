@@ -201,7 +201,9 @@ We can, again, observe that the \textit{data integrity} criterion does not play 
 \section{Weights Elicitation}
 Previously, the weights were assigned by asking a percentage expressing the importance of a criterion. Afterward, those weights are normalized in order to get a consistent weights assignation. Assigning those weights was not a trivial task because the considered criteria are all of the \emph{quality of service} type and some criterion are predominating then we had to modify the normalized weights to get accord with the Railnova's preferences.\\
 
-Though, we have decided to give a try to the \emph{Weights Elicitation} assignation. Assigning weights using an interactive comparison process helps to express the wanted weights assignation because it allows to give a preference order of the criteria, which was clearly the case for this project.
+Though, we have decided to give a try to the \emph{Weights Elicitation} assignation. Assigning weights using an interactive comparison process helps to express the wanted weights assignation because it allows to give a preference order of the criteria, which was clearly the case for this project.\\
+
+It can be observed at the figure~\ref{fig:alt-ranking} that the Amazon AWS alternative is the best one with this weight assignation. The second ranked alternative is OVH thus, we can observe than those two alternatives, even if not in the same order, are still figuring in the top 2. We can also observe at the figure~\ref{fig:alt-stab} that, the Amazon AWS position is more stable, except for the cost criterion, than when OVH was the best one. 
 
 \begin{figure}[h]
   \center
@@ -213,10 +215,9 @@ Though, we have decided to give a try to the \emph{Weights Elicitation} assignat
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth-4cm]{img/Result/alternative_stability.png}
-  \caption{Stability chart for the best alternative (AWS) using the weights elicitation feature.}
+  \caption{Stability chart for the best alternative (Amazon AWS) using the weights elicitation feature.}
   \label{fig:alt-stab}
 \end{figure}
-
 
 \section{Conclusion}
 
